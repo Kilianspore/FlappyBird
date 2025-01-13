@@ -4,7 +4,7 @@ public class Player : MonoBehaviour
 {
     Rigidbody2D Rigidbody;
     bool isJumping;
-    public float jumpForce = 100f;
+    public float jumpForce;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -16,8 +16,9 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyUp(KeyCode.Space))
         {
+            Debug.Log("Jump");
             isJumping = true;
         }
     }
@@ -25,7 +26,8 @@ public class Player : MonoBehaviour
     private void FixedUpdate() {
         if (isJumping)
         {
-            Rigidbody.AddForce(new Vector2(0f, jumpForce));
+            Rigidbody.linearVelocity = new Vector2(Rigidbody.linearVelocity.x, 0f); // Réinitialise la vitesse verticale
+            Rigidbody.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
             isJumping = false;
         }
     }
