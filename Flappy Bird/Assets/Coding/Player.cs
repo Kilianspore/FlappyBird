@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space))
         {
             Debug.Log("Jump");
             isJumping = true;

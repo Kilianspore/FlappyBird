@@ -441,8 +441,10 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/6000.0.32f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/6000.0.32f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll"
 "Assets/Coding/Floor.cs"
+"Assets/Coding/GameManager.cs"
 "Assets/Coding/Level.cs"
 "Assets/Coding/Player.cs"
+"Assets/Coding/Scorer.cs"
 "Assets/Coding/Tuyau.cs"
 -langversion:9.0
 /deterministic

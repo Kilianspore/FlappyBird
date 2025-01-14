@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class Level : MonoBehaviour
 {
-    public float Speed = 7.5f;      
-    public float Deadzone = -9.4f; 
+    public float Speed;      
+    public float Deadzone; 
     Vector3 initPosition;
-    public float ecartFixe = 9.283129f; 
+    public float ecartFixe; 
 
     void Start()
     {
@@ -22,13 +22,13 @@ public class Level : MonoBehaviour
             {
                 float newPosTuyauBasY, newPosTuyauHautY;
 
-                newPosTuyauBasY = Random.Range(-5.04f, -3.24f);
+                newPosTuyauBasY = Random.Range(-5.39f, -3f);
 
                 newPosTuyauHautY = newPosTuyauBasY + ecartFixe;
 
-                if (newPosTuyauHautY > 5.49f)
+                if (newPosTuyauHautY > 3.34f)
                 {
-                    newPosTuyauHautY = 5.49f; 
+                    newPosTuyauHautY = 3.34f; 
                     newPosTuyauBasY = newPosTuyauHautY - ecartFixe;
                 }
 
