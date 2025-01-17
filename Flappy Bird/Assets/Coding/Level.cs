@@ -22,13 +22,18 @@ public class Level : MonoBehaviour
             {
                 float newPosTuyauBasY, newPosTuyauHautY;
 
-                newPosTuyauBasY = Random.Range(-5.39f, -3f);
+                newPosTuyauBasY = Random.Range(-5.25f, -2.5f);
 
                 newPosTuyauHautY = newPosTuyauBasY + ecartFixe;
 
-                if (newPosTuyauHautY > 3.34f)
+                if (newPosTuyauHautY > 5.45f)
                 {
-                    newPosTuyauHautY = 3.34f; 
+                    newPosTuyauHautY = 5.45f;
+                    newPosTuyauBasY = newPosTuyauHautY - ecartFixe;
+                }
+                else if (newPosTuyauHautY < 3.05f)
+                {
+                    newPosTuyauHautY = 3.05f; 
                     newPosTuyauBasY = newPosTuyauHautY - ecartFixe;
                 }
 
